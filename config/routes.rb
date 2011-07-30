@@ -14,6 +14,7 @@ MatchaaCom::Application.routes.draw do
     member do
       put :finalize
     end
+    resources :answers, :only => [:index, :new, :create]
   end
 
   root :to => "home#index"
