@@ -7,14 +7,35 @@ class Match < ActiveRecord::Base
   before_create :set_tokens
 
   def players_name
-    "#{player1.name}-vs-#{player2.name}"
+    name
+  end
+
+  def name
+    "#{player1.name} vs #{player2.name}"
   end
 
   def questions
     Question.find(self.question_ids.split(","))
   end
 
+  def pending?
+    self.status == 'pending'
+  end
+
+  def pending!
+    self.update_attributes(status: 'pending')
+  end
+
+  def completed?
+    self.status == 'completed'
+  end
+
+  def new?
+    self.status == 'new'
+  end
+
   def send_invites!
+    self.pending!
     Mailer.invite(self, self.player1, self.token1).deliver
     Mailer.invite(self, self.player2, self.token2).deliver
   end

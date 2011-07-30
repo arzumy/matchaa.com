@@ -1,5 +1,5 @@
 class MatchesController < InheritedResources::Base
-  before_filter :authenticate_user!, :only => [:new, :create]
+  before_filter :authenticate_user!, :only => [:new, :create, :mine]
   
   def new
     @match = current_user.matches.build
@@ -33,5 +33,9 @@ class MatchesController < InheritedResources::Base
     resource.send_invites!
     flash[:notice] = 'Awesome! Your friends will be invited to answer the question in a bit. Meanwhile share this page with the others'
     redirect_to match_path(resource)
+  end
+
+  def mine
+    @matches = current_user.matches
   end
 end

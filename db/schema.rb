@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730202838) do
+ActiveRecord::Schema.define(:version => 20110730221146) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20110730202838) do
     t.integer  "player2_id"
     t.integer  "category_id"
     t.string   "question_ids"
-    t.string   "status"
+    t.string   "status",       :default => "new"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cached_slug"

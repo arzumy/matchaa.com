@@ -14,6 +14,9 @@ MatchaaCom::Application.routes.draw do
     member do
       put :finalize
     end
+    collection do
+      get :mine
+    end
     resources :answers, :only => [:index, :new, :create]
   end
 
