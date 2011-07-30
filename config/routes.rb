@@ -4,7 +4,11 @@ MatchaaCom::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" } do
     match '/users/sign_out' => 'sessions#destroy'
     match '/users/sign_in' => 'sessions#create'
+    match '/users/get_token' => 'sessions#new', :as => 'new_user_session'
+    match '/users/create_token' => 'sessions#create_token'
   end
+
+  match "/test" => 'home#test'
 
   root :to => "home#index"
 

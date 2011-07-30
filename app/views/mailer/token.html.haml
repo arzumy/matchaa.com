@@ -1,0 +1,5 @@
+%p= "Hey #{@user.name}"
+
+%p You can login to your account through the link below:
+
+%p= link_to 'Login', users_sign_in_url(authentication_token: @user.authentication_token)

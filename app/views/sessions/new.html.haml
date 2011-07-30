@@ -1,0 +1,7 @@
+= form_for(resource, :as => resource_name, :url => users_create_token_path) do |f|
+  %p
+    = f.label :email
+    %br
+    = f.email_field :email
+
+    = f.submit "Sign in"
