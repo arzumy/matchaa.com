@@ -18,10 +18,16 @@
               = f.email_field :email, :placeholder => 'Your Email'
             %p
               = f.submit 'Make a Match'
-      = link_to 'Sign Out', users_sign_out_path, :class => 'logout'
+      - if user_signed_in?
+        = link_to 'Sign Out', users_sign_out_path, :class => 'logout'
 
   %section#section
     %div.page
+      - unless flash.empty?
+        .notification.error
+          - flash.each do |key, value|
+            %h4= "#{key}: Wanted Dead or Alive "
+            %p= value
       = yield
 
   %footer#footer

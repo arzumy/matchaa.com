@@ -3,9 +3,9 @@ class SessionsController < Devise::SessionsController
     if user = User.find_by_email(params[:user][:email])
       user.reset_authentication_token!
       Mailer.token(user).deliver
-      flash.now[:notice] =  "Please check your email to login"
+      flash[:notice] =  "Please check your email to login"
     else
-      flash.now[:alert] =  "Sorry, can't find your email'"
+      flash[:alert] =  "Sorry, can't find your email'"
     end
     redirect_to new_user_session_path
   end
@@ -14,9 +14,9 @@ class SessionsController < Devise::SessionsController
     if user = User.find_by_authentication_token(params[:authentication_token])
       set_flash_message(:notice, :signed_in) if is_navigational_format?
       sign_in(:user, user)
-      render :text => 'logged in'
+      flash[:notice] = "Welcome back!"
     else
-      render :text => 'not logged in'
+      flash[:alert] =  "Sorry, can't sign you in"
     end
     redirect_to root_path
   end
