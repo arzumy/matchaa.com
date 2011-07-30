@@ -21,4 +21,16 @@ class MatchesController < InheritedResources::Base
       render :new
     end
   end
+
+  def edit
+    @categories = Category.all
+    edit!
+  end
+
+  def finalize
+    category_id = params[:match][:category_id]
+    resource.update_attributes(category_id: category_id, question_ids: params[:match][:category][category_id][:questions])
+    flash[:notice] = 'Awesome! Your friends will be invited to answer the question in a bit. Meanwhile share this page with the others'
+    redirect_to match_path(resource)
+  end
 end

@@ -1,0 +1,10 @@
+= simple_form_for(@match, :url => finalize_match_path) do |f|
+  = f.association :category, as: :radio, selected: 1
+  - @categories.each do |category|
+    = category.name
+      - questions = category.random_questions
+      = f.hidden_field :question_ids, name: "match[category][#{category.id}][questions]", value: questions.map(&:id).join(',')
+      - questions.each do |question|
+      %ul
+        %li= question.body
+  = f.submit 'Submit'
