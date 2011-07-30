@@ -20,4 +20,15 @@ $(document).ready(function () {
 	$('input[type=text], input[type=email]').each(function(i) {
 		$(this).attr('autocomplete', 'off');
 	});
+
+	$('#header h1').bind('click', function(e) {
+		e.preventDefault();
+		window.location.href = '/';
+	}).css('cursor', 'pointer');
+
+	if ($('.notification').length) {
+		setTimeout(function() {
+			$('.notification').slideDown('slow');
+		}, 1000)
+	}
 });

@@ -178,7 +178,7 @@ body {
 		.divider {
 			display: block;
 			padding: 0;
-			margin: 1em auto;
+			margin: 1em auto 0;
 			border-top: 4px dotted #999;
 			clear: both;
 			text-align: center;
@@ -225,6 +225,8 @@ body {
 			}
 
 			form {
+				width: 450px;
+				margin: 0 auto;
 				margin-top: 2em;
 			}
 		}
@@ -236,12 +238,15 @@ body {
 				text-transform: uppercase;
 				padding: .5em 0;
 				font-size: 11px;
+				font-weight: bold;
+				margin-left: 30px;
+				clear: both;
 			}
 
 			input[type=text], input[type=email] {
 				font-size: 16px;
 				font-weight: normal;
-				padding: 5px 10px;
+				padding: 10px;
 				border: none;
 				border-radius: 30px;
 				outline: none;
@@ -276,13 +281,17 @@ body {
 		}
 
 		.left, .right {
-			width: 400px;
+			width: 440px;
 			padding:  25px 15px;
 			margin: 0;
 			border-bottom: 1px solid #FFF;
 			box-shadow: 0 1px 4px #333 inset;
 			border-radius: 5px;
 
+			.input {
+				float: left;
+				width: 250px;
+			}
 
 			&.left {
 				float: left;
@@ -357,4 +366,15 @@ body {
 .clearfix {
 	clear: both;
 	display: block;
+}
+.notification {
+	position: absolute;
+	top: -32px;
+	padding: 15px 0;
+	color: #FFF;
+	background: #f54223;
+	border-radius: 0 0 10px 10px;
+	z-index: 5;
+	display: none;	
+	width: 100%;
 }

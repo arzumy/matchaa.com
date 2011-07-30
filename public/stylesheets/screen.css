@@ -240,7 +240,7 @@ body section#section #description span {
 body section#section .divider {
   display: block;
   padding: 0;
-  margin: 1em auto;
+  margin: 1em auto 0;
   border-top: 4px dotted #999;
   clear: both;
   text-align: center;
@@ -288,27 +288,32 @@ body section#section #login input[type=submit] {
 }
 /* line 227, ../../app/stylesheets/screen.scss */
 body section#section #login form {
+  width: 450px;
+  margin: 0 auto;
   margin-top: 2em;
 }
-/* line 233, ../../app/stylesheets/screen.scss */
+/* line 235, ../../app/stylesheets/screen.scss */
 body section#section form label {
   display: block;
   text-align: left;
   text-transform: uppercase;
   padding: .5em 0;
   font-size: 11px;
+  font-weight: bold;
+  margin-left: 30px;
+  clear: both;
 }
-/* line 241, ../../app/stylesheets/screen.scss */
+/* line 246, ../../app/stylesheets/screen.scss */
 body section#section form input[type=text], body section#section form input[type=email] {
   font-size: 16px;
   font-weight: normal;
-  padding: 5px 10px;
+  padding: 10px;
   border: none;
   border-radius: 30px;
   outline: none;
   width: 90%;
 }
-/* line 251, ../../app/stylesheets/screen.scss */
+/* line 256, ../../app/stylesheets/screen.scss */
 body section#section form input[type=submit] {
   clear: both;
   display: inline-block;
@@ -323,55 +328,60 @@ body section#section form input[type=submit] {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
 }
-/* line 266, ../../app/stylesheets/screen.scss */
+/* line 271, ../../app/stylesheets/screen.scss */
 body section#section form img {
   float: left;
   padding: 0 10px;
   margin: 0 30px 0 10px;
 }
-/* line 273, ../../app/stylesheets/screen.scss */
+/* line 278, ../../app/stylesheets/screen.scss */
 body section#section h1 {
   font-size: 1.8em;
   margin: .5em auto;
 }
-/* line 278, ../../app/stylesheets/screen.scss */
+/* line 283, ../../app/stylesheets/screen.scss */
 body section#section .left, body section#section .right {
-  width: 400px;
+  width: 440px;
   padding: 25px 15px;
   margin: 0;
   border-bottom: 1px solid #FFF;
   box-shadow: 0 1px 4px #333 inset;
   border-radius: 5px;
 }
-/* line 287, ../../app/stylesheets/screen.scss */
+/* line 291, ../../app/stylesheets/screen.scss */
+body section#section .left .input, body section#section .right .input {
+  float: left;
+  width: 250px;
+}
+/* line 296, ../../app/stylesheets/screen.scss */
 body section#section .left.left, body section#section .right.left {
   float: left;
   background: #555;
   color: #FFF;
 }
-/* line 293, ../../app/stylesheets/screen.scss */
+/* line 302, ../../app/stylesheets/screen.scss */
 body section#section .left.right, body section#section .right.right {
   float: right;
   background: #555;
   color: #FFF;
 }
-/* line 300, ../../app/stylesheets/screen.scss */
+/* line 309, ../../app/stylesheets/screen.scss */
 body section#section div.category {
   width: 300px;
   float: left;
   padding: 0 10px;
 }
-/* line 305, ../../app/stylesheets/screen.scss */
+/* line 314, ../../app/stylesheets/screen.scss */
 body section#section div.category h3 {
   margin: .5em auto;
 }
-/* line 309, ../../app/stylesheets/screen.scss */
+/* line 318, ../../app/stylesheets/screen.scss */
 body section#section div.category ul.questions {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 314, ../../app/stylesheets/screen.scss */
+/* line 323, ../../app/stylesheets/screen.scss */
 body section#section div.category ul.questions li {
   margin: 0;
   padding: 7px 5px;
@@ -380,25 +390,25 @@ body section#section div.category ul.questions li {
   line-height: 1.6em;
   font-size: 13px;
 }
-/* line 325, ../../app/stylesheets/screen.scss */
+/* line 334, ../../app/stylesheets/screen.scss */
 body section#section table {
   margin: 1em auto 0;
 }
-/* line 328, ../../app/stylesheets/screen.scss */
+/* line 337, ../../app/stylesheets/screen.scss */
 body section#section table thead td {
   font-family: 'Holtwood One SC';
 }
-/* line 333, ../../app/stylesheets/screen.scss */
+/* line 342, ../../app/stylesheets/screen.scss */
 body section#section table td {
   padding: 10px 5px;
 }
-/* line 339, ../../app/stylesheets/screen.scss */
+/* line 348, ../../app/stylesheets/screen.scss */
 body footer#footer {
   background: rgba(0, 0, 0, 0.78);
   color: #FFF;
   min-height: 100px;
 }
-/* line 344, ../../app/stylesheets/screen.scss */
+/* line 353, ../../app/stylesheets/screen.scss */
 body footer#footer span.copyright {
   padding: 1em 0;
   margin: .5em auto;
@@ -407,13 +417,26 @@ body footer#footer span.copyright {
   display: block;
 }
 
-/* line 354, ../../app/stylesheets/screen.scss */
+/* line 363, ../../app/stylesheets/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 357, ../../app/stylesheets/screen.scss */
+/* line 366, ../../app/stylesheets/screen.scss */
 .clearfix {
   clear: both;
   display: block;
+}
+
+/* line 370, ../../app/stylesheets/screen.scss */
+.notification {
+  position: absolute;
+  top: -32px;
+  padding: 15px 0;
+  color: #FFF;
+  background: #f54223;
+  border-radius: 0 0 10px 10px;
+  z-index: 5;
+  display: none;
+  width: 100%;
 }
