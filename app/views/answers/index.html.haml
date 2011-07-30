@@ -10,9 +10,9 @@
           = question.body
         %td
           - if current_user == @match.player1
-            = text_area_tag "answer[question][#{question.id}]"
+            = text_area_tag "answer[questions][#{question.id}]"
         %td
           - if current_user == @match.player2
-            = text_area_tag "answer[question][#{question.id}]"
+            = text_area_tag "answer[questions][#{question.id}]"
 
   = f.submit

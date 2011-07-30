@@ -5,7 +5,14 @@ class AnswersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+  end
 
+  def create
+    params[:answer][:questions].each do |question|
+      current_user.answers.create(match: @match, question_id: question.first,  body: question.last)
+    end
+    flash[:notice] = "Awesome. You are a brave man"
+    redirect_to match_path(@match)
   end
 
   def sign_in_user
