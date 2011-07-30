@@ -119,15 +119,19 @@ body header#header h1 a {
   background: transparent;
 }
 /* line 58, ../../app/stylesheets/screen.scss */
-body header#header a.logout {
+body header#header a.nav {
   font-family: 'Holtwood One SC';
-  font-size: 1.8em;
+  font-size: 1.2em;
   float: right;
-  margin: 25px 0;
+  margin: 35px 10px;
   text-decoration: none;
   color: #FFF;
 }
-/* line 67, ../../app/stylesheets/screen.scss */
+/* line 66, ../../app/stylesheets/screen.scss */
+body header#header a.nav:hover {
+  color: #055989;
+}
+/* line 71, ../../app/stylesheets/screen.scss */
 body header#header div.login {
   width: 333px;
   height: 188px;
@@ -137,7 +141,7 @@ body header#header div.login {
   z-index: 2;
   background: transparent url(../images/login-top.png) bottom center no-repeat;
 }
-/* line 76, ../../app/stylesheets/screen.scss */
+/* line 80, ../../app/stylesheets/screen.scss */
 body header#header div.login input[type=text], body header#header div.login input[type=email] {
   padding: 5px;
   border: none;
@@ -147,7 +151,7 @@ body header#header div.login input[type=text], body header#header div.login inpu
   font-size: 14px;
   outline: none;
 }
-/* line 86, ../../app/stylesheets/screen.scss */
+/* line 90, ../../app/stylesheets/screen.scss */
 body header#header div.login input[type=submit] {
   border: none;
   cursor: pointer;
@@ -159,12 +163,12 @@ body header#header div.login input[type=submit] {
   padding: 5px 20px;
   border-radius: 30px;
 }
-/* line 101, ../../app/stylesheets/screen.scss */
+/* line 105, ../../app/stylesheets/screen.scss */
 body section#section div.page {
   padding: 1em 0 3em 0;
   margin-top: 2em;
 }
-/* line 106, ../../app/stylesheets/screen.scss */
+/* line 110, ../../app/stylesheets/screen.scss */
 body section#section #banner {
   display: inline-block;
   background: transparent url("../images/front-banner.png") top left no-repeat;
@@ -173,13 +177,13 @@ body section#section #banner {
   position: relative;
   margin-top: 1em;
 }
-/* line 114, ../../app/stylesheets/screen.scss */
+/* line 118, ../../app/stylesheets/screen.scss */
 body section#section #banner .user {
   position: absolute;
   width: 200px;
   height: 100px;
 }
-/* line 119, ../../app/stylesheets/screen.scss */
+/* line 123, ../../app/stylesheets/screen.scss */
 body section#section #banner .user .user_name {
   font-size: 2em;
   font-family: 'Oswald', sans-serif;
@@ -189,7 +193,7 @@ body section#section #banner .user .user_name {
   margin: 1em auto;
   text-transform: uppercase;
 }
-/* line 129, ../../app/stylesheets/screen.scss */
+/* line 133, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.left {
   left: 10px;
   top: 100px;
@@ -199,11 +203,11 @@ body section#section #banner .user.left {
   background: transparent;
   border: none;
 }
-/* line 138, ../../app/stylesheets/screen.scss */
+/* line 142, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.left .user_image {
   float: left;
 }
-/* line 143, ../../app/stylesheets/screen.scss */
+/* line 147, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.right {
   right: 10px;
   top: 100px;
@@ -213,21 +217,22 @@ body section#section #banner .user.right {
   background: transparent;
   border: none;
 }
-/* line 152, ../../app/stylesheets/screen.scss */
+/* line 156, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.right .user_image {
   float: right;
 }
-/* line 159, ../../app/stylesheets/screen.scss */
+/* line 163, ../../app/stylesheets/screen.scss */
 body section#section #description {
   display: inline-block;
 }
-/* line 162, ../../app/stylesheets/screen.scss */
+/* line 166, ../../app/stylesheets/screen.scss */
 body section#section #description h1 {
   margin: .5em auto;
   font-size: 3em;
   color: #055989;
+  text-shadow: 0 1px #e0dcc5;
 }
-/* line 168, ../../app/stylesheets/screen.scss */
+/* line 173, ../../app/stylesheets/screen.scss */
 body section#section #description span {
   font-size: 1.5em;
   line-height: 1.6em;
@@ -236,7 +241,7 @@ body section#section #description span {
   float: left;
   width: 100%;
 }
-/* line 178, ../../app/stylesheets/screen.scss */
+/* line 183, ../../app/stylesheets/screen.scss */
 body section#section .divider {
   display: block;
   padding: 0;
@@ -245,7 +250,7 @@ body section#section .divider {
   clear: both;
   text-align: center;
 }
-/* line 186, ../../app/stylesheets/screen.scss */
+/* line 191, ../../app/stylesheets/screen.scss */
 body section#section .divider span {
   text-align: center;
   text-transform: uppercase;
@@ -255,16 +260,16 @@ body section#section .divider span {
   background: #bebba4;
   width: 30px;
 }
-/* line 197, ../../app/stylesheets/screen.scss */
+/* line 202, ../../app/stylesheets/screen.scss */
 body section#section #login {
   clear: both;
   padding: 1em 0;
 }
-/* line 201, ../../app/stylesheets/screen.scss */
+/* line 206, ../../app/stylesheets/screen.scss */
 body section#section #login label {
   display: none;
 }
-/* line 205, ../../app/stylesheets/screen.scss */
+/* line 210, ../../app/stylesheets/screen.scss */
 body section#section #login input[type=text], body section#section #login input[type=email] {
   font-size: 16px;
   font-weight: normal;
@@ -274,7 +279,7 @@ body section#section #login input[type=text], body section#section #login input[
   outline: none;
   text-align: center;
 }
-/* line 215, ../../app/stylesheets/screen.scss */
+/* line 220, ../../app/stylesheets/screen.scss */
 body section#section #login input[type=submit] {
   display: inline;
   border: none;
@@ -286,13 +291,13 @@ body section#section #login input[type=submit] {
   text-shadow: 0 1px #000;
   text-transform: uppercase;
 }
-/* line 227, ../../app/stylesheets/screen.scss */
+/* line 232, ../../app/stylesheets/screen.scss */
 body section#section #login form {
   width: 450px;
   margin: 0 auto;
   margin-top: 2em;
 }
-/* line 235, ../../app/stylesheets/screen.scss */
+/* line 240, ../../app/stylesheets/screen.scss */
 body section#section form label {
   display: block;
   text-align: left;
@@ -303,7 +308,7 @@ body section#section form label {
   margin-left: 30px;
   clear: both;
 }
-/* line 246, ../../app/stylesheets/screen.scss */
+/* line 251, ../../app/stylesheets/screen.scss */
 body section#section form input[type=text], body section#section form input[type=email] {
   font-size: 16px;
   font-weight: normal;
@@ -313,7 +318,7 @@ body section#section form input[type=text], body section#section form input[type
   outline: none;
   width: 90%;
 }
-/* line 256, ../../app/stylesheets/screen.scss */
+/* line 261, ../../app/stylesheets/screen.scss */
 body section#section form input[type=submit] {
   clear: both;
   display: inline-block;
@@ -328,18 +333,18 @@ body section#section form input[type=submit] {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
 }
-/* line 271, ../../app/stylesheets/screen.scss */
+/* line 276, ../../app/stylesheets/screen.scss */
 body section#section form img {
   float: left;
   padding: 0 10px;
   margin: 0 30px 0 10px;
 }
-/* line 278, ../../app/stylesheets/screen.scss */
+/* line 283, ../../app/stylesheets/screen.scss */
 body section#section h1 {
   font-size: 1.8em;
   margin: .5em auto;
 }
-/* line 283, ../../app/stylesheets/screen.scss */
+/* line 288, ../../app/stylesheets/screen.scss */
 body section#section .left, body section#section .right {
   width: 440px;
   padding: 25px 15px;
@@ -348,40 +353,40 @@ body section#section .left, body section#section .right {
   box-shadow: 0 1px 4px #333 inset;
   border-radius: 5px;
 }
-/* line 291, ../../app/stylesheets/screen.scss */
+/* line 296, ../../app/stylesheets/screen.scss */
 body section#section .left .input, body section#section .right .input {
   float: left;
   width: 250px;
 }
-/* line 296, ../../app/stylesheets/screen.scss */
+/* line 301, ../../app/stylesheets/screen.scss */
 body section#section .left.left, body section#section .right.left {
   float: left;
   background: #555;
   color: #FFF;
 }
-/* line 302, ../../app/stylesheets/screen.scss */
+/* line 307, ../../app/stylesheets/screen.scss */
 body section#section .left.right, body section#section .right.right {
   float: right;
   background: #555;
   color: #FFF;
 }
-/* line 309, ../../app/stylesheets/screen.scss */
+/* line 314, ../../app/stylesheets/screen.scss */
 body section#section div.category {
   width: 300px;
   float: left;
   padding: 0 10px;
 }
-/* line 314, ../../app/stylesheets/screen.scss */
+/* line 319, ../../app/stylesheets/screen.scss */
 body section#section div.category h3 {
   margin: .5em auto;
 }
-/* line 318, ../../app/stylesheets/screen.scss */
+/* line 323, ../../app/stylesheets/screen.scss */
 body section#section div.category ul.questions {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 323, ../../app/stylesheets/screen.scss */
+/* line 328, ../../app/stylesheets/screen.scss */
 body section#section div.category ul.questions li {
   margin: 0;
   padding: 7px 5px;
@@ -390,25 +395,25 @@ body section#section div.category ul.questions li {
   line-height: 1.6em;
   font-size: 13px;
 }
-/* line 334, ../../app/stylesheets/screen.scss */
+/* line 339, ../../app/stylesheets/screen.scss */
 body section#section table {
   margin: 1em auto 0;
 }
-/* line 337, ../../app/stylesheets/screen.scss */
+/* line 342, ../../app/stylesheets/screen.scss */
 body section#section table thead td {
   font-family: 'Holtwood One SC';
 }
-/* line 342, ../../app/stylesheets/screen.scss */
+/* line 347, ../../app/stylesheets/screen.scss */
 body section#section table td {
   padding: 10px 5px;
 }
-/* line 348, ../../app/stylesheets/screen.scss */
+/* line 353, ../../app/stylesheets/screen.scss */
 body footer#footer {
   background: rgba(0, 0, 0, 0.78);
   color: #FFF;
   min-height: 100px;
 }
-/* line 353, ../../app/stylesheets/screen.scss */
+/* line 358, ../../app/stylesheets/screen.scss */
 body footer#footer span.copyright {
   padding: 1em 0;
   margin: .5em auto;
@@ -417,18 +422,18 @@ body footer#footer span.copyright {
   display: block;
 }
 
-/* line 363, ../../app/stylesheets/screen.scss */
+/* line 368, ../../app/stylesheets/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 366, ../../app/stylesheets/screen.scss */
+/* line 371, ../../app/stylesheets/screen.scss */
 .clearfix {
   clear: both;
   display: block;
 }
 
-/* line 370, ../../app/stylesheets/screen.scss */
+/* line 375, ../../app/stylesheets/screen.scss */
 .notification {
   position: absolute;
   top: -32px;

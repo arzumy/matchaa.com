@@ -29,6 +29,10 @@ $(document).ready(function () {
 	if ($('.notification').length) {
 		setTimeout(function() {
 			$('.notification').slideDown('slow');
-		}, 1000)
+		}, 1000);
+
+		setTimeout(function() {
+			$('.notification').slideUp('fast');
+		}, 5*1e3)
 	}
 });

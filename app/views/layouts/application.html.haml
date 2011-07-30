@@ -19,7 +19,9 @@
             %p
               = f.submit 'Make a Match'
       - if user_signed_in?
-        = link_to 'Sign Out', users_sign_out_path, :class => 'logout'
+        = link_to 'Sign Out', users_sign_out_path, :class => 'nav'
+        = link_to 'Create Match', new_match_path, :class => 'nav'
+        = link_to 'My Match', mine_matches_path, :class => 'nav'
 
   %section#section
     %div.page
@@ -32,7 +34,7 @@
 
   %footer#footer
     %div.page
-      %span.copyright This 'Machaa!' brought to you by: Cool Codelovr
+      %span.copyright This 'Machaa!' brought to you by OSOM PEOPLES
 
 
   = javascript_include_tag :defaults

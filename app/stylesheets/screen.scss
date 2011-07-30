@@ -55,13 +55,17 @@ body {
 			}
 		}
 
-		a.logout {
+		a.nav {
 			font-family: 'Holtwood One SC';
-			font-size: 1.8em;
+			font-size: 1.2em;
 			float: right;
-			margin: 25px 0;
+			margin: 35px 10px;
 			text-decoration: none;
 			color: #FFF;
+
+			&:hover {
+				color: #055989;
+			}
 		}
 
 		div.login {
@@ -163,6 +167,7 @@ body {
 				margin: .5em auto;
 				font-size: 3em;
 				color: #055989;
+				text-shadow: 0 1px #e0dcc5;
 			}
 
 			span {
