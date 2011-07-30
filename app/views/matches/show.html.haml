@@ -1,0 +1,11 @@
+%p= @match.category.name
+%p= "#{time_ago_in_words(@match.created_at)} ago"
+= banner(@match)
+
+%table
+  - @match.questions.each do |question|
+    %tr
+      %td
+        = question.body
+      %td
+      %td

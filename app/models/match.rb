@@ -8,4 +8,8 @@ class Match < ActiveRecord::Base
   def players_name
     "#{player1.name}-vs-#{player2.name}"
   end
+
+  def questions
+    Question.find(self.question_ids.split(","))
+  end
 end

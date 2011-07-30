@@ -1,15 +1,16 @@
 = banner(Match.last)
 
-%div.divider
-	%span or
+- unless user_signed_in?
+  %div.divider
+    %span or
 
-%div#login
-	= render :partial => 'sessions/form'
+  %div#login
+    = render :partial => 'sessions/form'
 
 %div.divider
 
 %div#description
-	%h1
-		What's 'MATCHAA' all about?
-	%span
-		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+  %h1
+    What's 'MATCHAA' all about?
+  %span
+    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
