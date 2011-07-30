@@ -1,11 +1,17 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
+gem 'mysql2', '0.2.6'
+gem 'devise'
+gem 'inherited_resources'
+gem 'haml'
+gem "compass"
+gem 'jquery-rails'
+gem 'therubyracer', :require => false
+gem 'barista'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
