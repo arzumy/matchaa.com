@@ -1,0 +1,18 @@
+%p= @match.category.name
+%p= "#{time_ago_in_words(@match.created_at)} ago"
+= banner(@match)
+
+- form_for(:answer, :url => match_answers_path(@match)) do |f|
+  %table
+    - @match.questions.each do |question|
+      %tr
+        %td
+          = question.body
+        %td
+          - if current_user == @match.player1
+            = text_area_tag "answer[question][#{question.id}]"
+        %td
+          - if current_user == @match.player2
+            = text_area_tag "answer[question][#{question.id}]"
+
+  = f.submit

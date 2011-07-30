@@ -1,9 +1,16 @@
 class AnswersController < ApplicationController
   before_filter :find_match
   before_filter :verify_token, :only => [:index]
+  before_filter :sign_in_user, :only => [:index]
+  before_filter :authenticate_user!
 
   def index
-    head :ok
+
+  end
+
+  def sign_in_user
+    user = params[:t] == @match.token1 ? @match.player1 : @match.player2
+    sign_in(:user, user)
   end
 
   def verify_token
