@@ -13,7 +13,6 @@ gem 'simple_form'
 gem 'friendly_id'
 gem 'gravtastic'
 gem 'heroku'
-gem 'rake'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
