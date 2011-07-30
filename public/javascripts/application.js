@@ -16,4 +16,8 @@ $(document).ready(function () {
 	}, function(e) {
 		$(this).css('opacity', .7);
 	});
+
+	$('input[type=text], input[type=email]').each(function(i) {
+		$(this).attr('autocomplete', 'off');
+	});
 });

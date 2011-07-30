@@ -68,7 +68,7 @@ body {
 			width: 333px;
 			height: 188px;
 			position: absolute;
-			right: 0;
+			right: -25px;
 			top: 0;
 			z-index: 2;
 			background: transparent url(../images/login-top.png) bottom center no-repeat;
@@ -109,6 +109,7 @@ body {
 			width: 765px;
 			height: 300px;
 			position: relative;
+			margin-top: 1em;
 
 			.user {
 				position: absolute;
@@ -204,10 +205,11 @@ body {
 			input[type=text], input[type=email] {
 				font-size: 16px;
 				font-weight: normal;
-				padding: 5px 10px;
+				padding: 10px;
 				border: none;
 				border-radius: 30px;
 				outline: none;
+				text-align: center;
 			} 
 
 			input[type=submit] {
@@ -220,6 +222,10 @@ body {
 				color: #FFF;
 				text-shadow: 0 1px #000;
 				text-transform: uppercase;
+			}
+
+			form {
+				margin-top: 2em;
 			}
 		}
 
