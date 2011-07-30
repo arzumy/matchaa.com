@@ -1,0 +1,4 @@
+= simple_form_for(:user, :url => users_create_token_path) do |f|
+  %p
+    = f.input :email, :autofocus => false, :placeholder => 'Enter your email address'
+    = f.submit "Sign in"

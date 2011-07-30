@@ -71,7 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   margin: 0;
   padding: 0;
-  background: #bab79f;
+  background: #bab79f url(../images/body-bg.png) top center repeat;
   text-align: center;
 }
 /* line 14, ../../app/stylesheets/screen.scss */
@@ -92,13 +92,19 @@ body #header div.page, body #section div.page, body #footer div.page {
 body h1, body h2, body h3, body h4, body h5 {
   font-family: 'Holtwood One SC';
 }
-/* line 33, ../../app/stylesheets/screen.scss */
+/* line 32, ../../app/stylesheets/screen.scss */
+body input[type=submit] {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px #000;
+}
+/* line 39, ../../app/stylesheets/screen.scss */
 body header#header {
   background: rgba(0, 0, 0, 0.8);
   border-bottom: 5px solid #706e5e;
   min-height: 80px;
 }
-/* line 38, ../../app/stylesheets/screen.scss */
+/* line 44, ../../app/stylesheets/screen.scss */
 body header#header h1 {
   float: left;
   margin: .5em auto;
@@ -106,11 +112,11 @@ body header#header h1 {
   font-weight: bold;
   color: #FFF;
 }
-/* line 45, ../../app/stylesheets/screen.scss */
+/* line 51, ../../app/stylesheets/screen.scss */
 body header#header h1 a {
   background: transparent;
 }
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 56, ../../app/stylesheets/screen.scss */
 body header#header div.login {
   width: 333px;
   height: 188px;
@@ -120,7 +126,7 @@ body header#header div.login {
   z-index: 2;
   background: transparent url(../images/login-top.png) bottom center no-repeat;
 }
-/* line 59, ../../app/stylesheets/screen.scss */
+/* line 65, ../../app/stylesheets/screen.scss */
 body header#header div.login input[type=text], body header#header div.login input[type=email] {
   padding: 5px;
   border: none;
@@ -130,49 +136,105 @@ body header#header div.login input[type=text], body header#header div.login inpu
   font-size: 14px;
   outline: none;
 }
-/* line 69, ../../app/stylesheets/screen.scss */
+/* line 75, ../../app/stylesheets/screen.scss */
 body header#header div.login input[type=submit] {
-  background: transparent url(../images/login-submit.png) top left no-repeat;
   border: none;
-  width: 206px;
-  height: 36px;
-  text-indent: -9999em;
   cursor: pointer;
-  margin: 1em auto;
+  margin: .5em auto;
   outline: none;
+  background: #055989;
+  color: #FFF;
+  font-size: 1.4em;
+  padding: 5px 20px;
+  border-radius: 30px;
 }
-/* line 83, ../../app/stylesheets/screen.scss */
+/* line 90, ../../app/stylesheets/screen.scss */
 body section#section div.page {
   padding: 3em 0;
   margin-top: 2em;
 }
-/* line 88, ../../app/stylesheets/screen.scss */
+/* line 95, ../../app/stylesheets/screen.scss */
 body section#section #banner {
   display: inline-block;
   background: transparent url("../images/front-banner.png") top left no-repeat;
   width: 765px;
   height: 300px;
 }
-/* line 96, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
+body section#section #description {
+  display: inline-block;
+}
+/* line 105, ../../app/stylesheets/screen.scss */
 body section#section #description h1 {
   margin: .5em auto;
   font-size: 3em;
   color: #055989;
 }
-/* line 102, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 body section#section #description span {
   font-size: 1.5em;
   line-height: 1.6em;
   color: #5e5c4e;
   text-shadow: 0 1px #FFF;
+  float: left;
+  width: 100%;
 }
-/* line 111, ../../app/stylesheets/screen.scss */
+/* line 121, ../../app/stylesheets/screen.scss */
+body section#section .divider {
+  display: block;
+  padding: 0;
+  margin: 1em auto;
+  border-top: 4px dotted #999;
+  clear: both;
+  text-align: center;
+}
+/* line 129, ../../app/stylesheets/screen.scss */
+body section#section .divider span {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin: -12px auto 0;
+  background: #bebba4;
+  width: 30px;
+}
+/* line 140, ../../app/stylesheets/screen.scss */
+body section#section #login {
+  clear: both;
+  padding: 1em 0;
+}
+/* line 144, ../../app/stylesheets/screen.scss */
+body section#section #login label {
+  display: none;
+}
+/* line 148, ../../app/stylesheets/screen.scss */
+body section#section #login input[type=text], body section#section #login input[type=email] {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+}
+/* line 157, ../../app/stylesheets/screen.scss */
+body section#section #login input[type=submit] {
+  display: inline;
+  border: none;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 6px 18px;
+  background: #055989;
+  color: #FFF;
+  text-shadow: 0 1px #000;
+  text-transform: uppercase;
+}
+/* line 171, ../../app/stylesheets/screen.scss */
 body footer#footer {
   background: rgba(0, 0, 0, 0.78);
   color: #FFF;
   min-height: 100px;
 }
-/* line 116, ../../app/stylesheets/screen.scss */
+/* line 176, ../../app/stylesheets/screen.scss */
 body footer#footer span.copyright {
   padding: .5em 0;
   margin: 0;
