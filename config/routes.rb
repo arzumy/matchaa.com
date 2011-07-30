@@ -10,6 +10,8 @@ MatchaaCom::Application.routes.draw do
 
   match "/test" => 'home#test'
 
+  resources :matches, :only => [:create, :new]
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:

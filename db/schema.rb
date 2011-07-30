@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730110134) do
+ActiveRecord::Schema.define(:version => 20110730154056) do
+
+  create_table "categories", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "player1_id"
+    t.integer  "player2_id"
+    t.integer  "category_id"
+    t.string   "question_ids"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.integer "category_id"
+    t.string  "body"
+  end
 
   create_table "users", :force => true do |t|
     t.integer  "sign_in_count",        :default => 0
