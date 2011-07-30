@@ -15,10 +15,10 @@ class SessionsController < Devise::SessionsController
       set_flash_message(:notice, :signed_in) if is_navigational_format?
       sign_in(:user, user)
       render :text => 'logged in'
-      #respond_with user, :location => redirect_location(:users, user)
     else
       render :text => 'not logged in'
     end
+    redirect_to root_path
   end
 
   def destroy
