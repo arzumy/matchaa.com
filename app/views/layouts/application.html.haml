@@ -1,34 +1,30 @@
 !!!5
 %head
-	%title Matchaa.com
-	%link{:href => 'http://fonts.googleapis.com/css?family=Holtwood+One+SC', :rel => 'stylesheet', :type => 'text/css'}
-	%link{:href => 'http://fonts.googleapis.com/css?family=Oswald', :rel => 'stylesheet', :type => 'text/css'}
-	= stylesheet_link_tag :all
+  %title Matchaa.com
+  %link{:href => 'http://fonts.googleapis.com/css?family=Holtwood+One+SC', :rel => 'stylesheet', :type => 'text/css'}
+  %link{:href => 'http://fonts.googleapis.com/css?family=Oswald', :rel => 'stylesheet', :type => 'text/css'}
+  = stylesheet_link_tag :all
 
 %body
-	%header#header
-		%div.page
-			%h1 
-				matchaa
-			%div.login
-				= form_for(:resources) do |f|
-					=# devise_error_messages!
+  %header#header
+    %div.page
+      %h1 matchaa
+      - unless user_signed_in?
+        %div.login
+          = form_for(:resources) do |f|
+            %p
+              = f.text_field :name, :placeholder => 'Your Name'
+            %p
+              = f.email_field :email, :placeholder => 'Your Email'
+            %p
+              = f.submit 'Make a Match'
 
-					%p
-						= f.text_field :name, :placeholder => 'Your Name'
+  %section#section
+    %div.page
+    = yield
 
-					%p
-						= f.email_field :email, :placeholder => 'Your Email'
+  %footer#footer
+    %div.page
+      %span.copyright This 'Machaa!' brought to you by: Cool Codelovr
 
-					%p
-						= f.submit 'Make a Match'
-
-	%section#section
-		%div.page
-			= yield
-
-	%footer#footer
-		%div.page 
-			%span.copyright This 'Machaa!' brought to you by: Cool Codelovr
-
-	= javascript_include_tag :defaults
+  = javascript_include_tag :defaults
