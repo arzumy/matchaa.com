@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
+  include Gravtastic
+  gravtastic
+  
   has_many :matches
-
   before_save :ensure_authentication_token
 
   # Include default devise modules. Others available are:
