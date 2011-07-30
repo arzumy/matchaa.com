@@ -1,0 +1,123 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #bab79f;
+	text-align: center;
+
+	#header, #section, #footer {
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		div.page {
+			width: 960px;
+			margin: 0 auto;
+			padding: 0;
+			position: relative;
+		}
+	}
+
+	h1, h2, h3, h4, h5 {
+		font-family: 'Holtwood One SC';
+	}
+
+
+	header#header {
+		background: rgba(0, 0, 0, .8);
+		border-bottom: 5px solid #706e5e;
+		min-height: 80px;
+
+		h1 {
+			float	: left;
+			margin	: .5em auto;
+			font-size: 2.5em;
+			font-weight: bold;
+			color: #FFF;
+
+			a {
+				background	: transparent;
+			}
+		}
+
+		div.login {
+			width: 333px;
+			height: 188px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 2;
+			background: transparent url(../images/login-top.png) bottom center no-repeat;
+
+			input[type=text], input[type=email] {
+				padding: 5px;
+				border: none;
+				border-radius: 30px;
+				margin: .5em auto;
+				min-width: 250px;
+				font-size: 14px;
+				outline: none;
+			}
+
+			input[type=submit] {
+				background: transparent url(../images/login-submit.png) top left no-repeat;
+				border: none;
+				width: 206px;
+				height: 36px;
+				text-indent: -9999em;
+				cursor: pointer;
+				margin: 1em auto;
+				outline: none;
+			}
+		}
+	}
+
+	section#section {
+		div.page {
+			padding: 3em 0;
+			margin-top: 2em;	
+		}	
+
+		#banner {
+			display	: inline-block;
+			background: transparent url('../images/front-banner.png') top left no-repeat;
+			width: 765px;
+			height: 300px;
+		}
+
+		#description {
+			h1 {
+				margin: .5em auto;
+				font-size: 3em;
+				color: #055989;
+			}
+
+			span {
+				font-size: 1.5em;
+				line-height: 1.6em;
+				color: #5e5c4e;
+				text-shadow: 0 1px #FFF;
+			}
+		}
+	}
+
+	footer#footer {
+		background: rgba(0, 0, 0, .78);
+		color: #FFF;
+		min-height: 100px;
+
+		span.copyright {
+			padding: .5em 0;
+			margin: 0;
+			font-size: 11px;
+
+		}
+	}
+}
