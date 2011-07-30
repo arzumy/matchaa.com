@@ -10,7 +10,7 @@ MatchaaCom::Application.routes.draw do
 
   match "/test" => 'home#test'
 
-  resources :matches, :only => [:create, :new]
+  resources :matches, :only => [:create, :new, :edit]
 
   root :to => "home#index"
 

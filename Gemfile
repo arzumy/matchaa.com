@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'therubyracer', :require => false
 gem 'barista'
 gem 'simple_form'
+gem 'friendly_id'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

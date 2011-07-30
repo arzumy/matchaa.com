@@ -7,7 +7,7 @@ class SessionsController < Devise::SessionsController
     else
       flash.now[:alert] =  "Sorry, can't find your email'"
     end
-    render :new
+    redirect_to new_user_session_path
   end
 
   def create
