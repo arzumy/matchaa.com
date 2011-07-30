@@ -11,7 +11,7 @@
       %h1 matchaa
       - unless user_signed_in?
         %div.login
-          = form_for(:resources) do |f|
+          = form_for(:user, url: registration_path(:user) ) do |f|
             %p
               = f.text_field :name, :placeholder => 'Your Name'
             %p
