@@ -1,5 +1,11 @@
 MatchaaCom::Application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "registrations" }
+
+
+  devise_for :users, :controllers => { :registrations => "registrations" } do
+    match '/users/sign_out' => 'sessions#destroy'
+    match '/users/sign_in' => 'sessions#create'
+  end
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:
