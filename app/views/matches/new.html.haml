@@ -1,10 +1,13 @@
-= simple_form_for(@match, :url => matches_path) do |f|
-  = f.fields_for :player1 do |ff|
-    = ff.input :name
-    = ff.input :email
 
-  = f.fields_for :player2 do |ff|
-    = ff.input :name
-    = ff.input :email
-  
-  = f.submit
+= simple_form_for(@match, :url => matches_path) do |f|
+	%h1 Enter Name and  Email for Contestant
+	%div.user.left
+		= f.fields_for :player1 do |ff|
+			= ff.input :name
+			= ff.input :email
+	%div.user.right
+		= f.fields_for :player2 do |ff|
+			= ff.input :name
+			= ff.input :email
+
+	= f.submit

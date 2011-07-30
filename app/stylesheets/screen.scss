@@ -29,7 +29,7 @@ body {
 		font-family: 'Holtwood One SC';
 	}
 
-	input[type=submit] {
+	input[type=submit], #footer {
 		font-family: 'Oswald', sans-serif;
 		text-transform: uppercase;
 		text-shadow: 0 1px #000;
@@ -53,6 +53,15 @@ body {
 			a {
 				background	: transparent;
 			}
+		}
+
+		a.logout {
+			font-family: 'Holtwood One SC';
+			font-size: 1.8em;
+			float: right;
+			margin: 25px 0;
+			text-decoration: none;
+			color: #FFF;
 		}
 
 		div.login {
@@ -90,7 +99,7 @@ body {
 
 	section#section {
 		div.page {
-			padding: 3em 0;
+			padding: 1em 0 3em 0;
 			margin-top: 2em;	
 		}	
 
@@ -120,6 +129,10 @@ body {
 					left: 10px;
 					top: 100px;
 					margin: 0;
+					padding: 0;
+					box-shadow: none;
+					background: transparent;
+					border: none;
 
 					.user_image {
 						float: left;
@@ -130,6 +143,10 @@ body {
 					right: 10px;
 					top: 100px;
 					margin: 0;
+					padding: 0;
+					box-shadow: none;
+					background: transparent;
+					border: none;
 
 					.user_image {
 						float: right;
@@ -205,6 +222,112 @@ body {
 				text-transform: uppercase;
 			}
 		}
+
+		form {
+			label {
+				display: block;
+				text-align: left;
+				text-transform: uppercase;
+				padding: .5em 0;
+				font-size: 11px;
+			}
+
+			input[type=text], input[type=email] {
+				font-size: 16px;
+				font-weight: normal;
+				padding: 5px 10px;
+				border: none;
+				border-radius: 30px;
+				outline: none;
+				width: 90%;
+			} 
+
+			input[type=submit] {
+				clear: both;
+				display: inline-block;
+				border: none;
+				font-size: 16px;
+				border-radius: 25px;
+				padding: 6px 18px;
+				margin: 1em auto 0;
+				background: #055989;
+				color: #FFF;
+				text-shadow: 0 1px #000;
+				text-transform: uppercase;
+				font-family: 'Oswald', sans-serif;
+			}
+
+			img {
+				float: left;
+				padding: 0 10px;
+				margin: 0 30px 0 10px;
+			}
+		}
+
+		h1 {
+			font-size: 1.8em;
+			margin: .5em auto
+		}
+
+		.left, .right {
+			width: 400px;
+			padding:  25px 15px;
+			margin: 0;
+			border-bottom: 1px solid #FFF;
+			box-shadow: 0 1px 4px #333 inset;
+			border-radius: 5px;
+
+
+			&.left {
+				float: left;
+				background: #555;
+				color: #FFF;
+			}
+
+			&.right {
+				float: right;
+				background: #555;
+				color: #FFF;
+			}
+		}
+
+		div.category {
+			width: 300px;
+			float: left;
+			padding: 0 10px;
+
+			h3 {
+				margin: .5em auto;
+			}
+
+			ul.questions {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin: 0;
+					padding: 7px 5px;
+					text-align: left;
+					border-bottom: 1px dashed #CCC;
+					line-height: 1.6em;
+					font-size: 13px;
+				}
+			}
+		}
+
+		table {
+			margin: 1em auto 0;
+			thead {
+				td {
+					font-family: 'Holtwood One SC';
+				}
+			}
+
+			td {
+				padding: 10px 5px;
+			}
+		}
 	}
 
 	footer#footer {
@@ -213,10 +336,19 @@ body {
 		min-height: 100px;
 
 		span.copyright {
-			padding: .5em 0;
-			margin: 0;
-			font-size: 11px;
-
+			padding: 1em 0;
+			margin: .5em auto;
+			font-size: 1.4em;
+			text-transform: uppercase;
+			display: block;
 		}
 	}
+}
+
+.hidden {
+	display: none;
+}
+.clearfix {
+	clear: both;
+	display: block;
 }

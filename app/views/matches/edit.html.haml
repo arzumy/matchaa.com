@@ -1,10 +1,19 @@
 = simple_form_for(@match, :url => finalize_match_path) do |f|
-  = f.association :category, as: :radio, selected: 1
-  - @categories.each do |category|
-    = category.name
-      - questions = category.random_questions
-      = f.hidden_field :question_ids, name: "match[category][#{category.id}][questions]", value: questions.map(&:id).join(',')
-      - questions.each do |question|
-      %ul
-        %li= question.body
-  = f.submit 'Submit'
+	%h1 Select Categories or Templates
+	%h5 Please click image to select category
+	%div.hidden
+		= f.association :category, as: :radio, selected: 1
+	= image_tag 'realmatcha256.png', :id => 'category_id_1'
+	= image_tag 'taskmastaa256.png', :id => 'category_id_2'
+	= image_tag 'matchalove256.png', :id => 'category_id_3'
+	- @categories.each do |category|
+		%div.category
+			%h3 
+				= category.name
+			- questions = category.random_questions
+			= f.hidden_field :question_ids, name: "match[category][#{category.id}][questions]", value: questions.map(&:id).join(',')
+			%ul.questions
+				- questions.each do |question|
+					%li= question.body
+	%div.clearfix
+	= f.submit 'Submit'

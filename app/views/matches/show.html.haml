@@ -1,11 +1,18 @@
-%p= @match.category.name
-%p= "#{time_ago_in_words(@match.created_at)} ago"
+%div.match-time
+	%h1= @match.category.name
+	%h5= "#{time_ago_in_words(@match.created_at)} ago"
+
 = banner(@match)
 
 %table
-  - @match.questions.each do |question|
-    %tr
-      %td
-        = question.body
-      %td
-      %td
+	%thead
+		%tr
+			%td Question
+			%td(width="200") Player 1
+			%td(width="200") Player 2
+	- @match.questions.each do |question|
+		%tr
+			%td
+				= question.body
+			%td
+			%td
