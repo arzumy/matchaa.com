@@ -9,6 +9,7 @@ gem "compass"
 gem 'jquery-rails'
 gem 'therubyracer', :require => false
 gem 'barista'
+gem "therubyracer-heroku"
 gem 'simple_form'
 gem 'friendly_id'
 gem 'gravtastic'

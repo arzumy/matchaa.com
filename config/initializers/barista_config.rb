@@ -1,6 +1,7 @@
 # Configure barista.
 Barista.configure do |c|
-
+  c.root = Rails.root.join("app", "coffeescripts")
+  c.output_root = Rails.root.join("tmp", "javascripts")
   # Change the root to use app/scripts
   # c.root = Rails.root.join("app", "scripts")
 
@@ -60,3 +61,11 @@ Barista.configure do |c|
   # c.embedded_interpreter = true
 
 end
+
+require 'fileutils'
+
+Rails.configuration.middleware.delete('Barista::Filter')
+Rails.configuration.middleware.insert_before('Rack::Sendfile', 'Barista::Filter')
+Rails.configuration.middleware.insert_before('Rack::Sendfile', 'Rack::Static',
+    :urls => ['/javascripts'],
+    :root => "#{Rails.root}/tmp")
