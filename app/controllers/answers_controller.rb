@@ -3,6 +3,8 @@ class AnswersController < ApplicationController
   before_filter :verify_token, :only => [:index]
   before_filter :sign_in_user, :only => [:index]
   before_filter :authenticate_user!
+  after_filter :update_token, :only => [:create]
+  after_filter :update_match_status, :only => [:create]
 
   def index
   end
@@ -29,5 +31,19 @@ class AnswersController < ApplicationController
 
   def find_match
     @match = Match.find(params[:match_id])
+  end
+
+  def update_token
+    if @match.token1 == params[:answer][:t]
+      @match.update_attributes(token1: nil)
+    elsif @match.token2 == params[:answer][:t]
+      @match.update_attributes(token2: nil)
+    end
+  end
+
+  def update_match_status
+     if [@match.token1, @matchs.token2].all? {|t| t.nil?}
+       @match.completed!
+     end
   end
 end

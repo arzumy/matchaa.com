@@ -30,6 +30,10 @@ class Match < ActiveRecord::Base
     self.status == 'completed'
   end
 
+  def completed!
+    self.update_attributes(status: 'completed')
+  end
+
   def new?
     self.status == 'new'
   end

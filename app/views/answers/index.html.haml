@@ -3,6 +3,7 @@
 = banner(@match)
 
 - form_for(:answer, :url => match_answers_path(@match)) do |f|
+  = f.hidden_field :authentication_token, value: params[:t]
   %table
     - @match.questions.each do |question|
       %tr
