@@ -43,10 +43,12 @@ body {
 
 		h1 {
 			float	: left;
-			margin	: .5em auto;
+			padding: .5em 0 .5em 2.2em;
+			margin: 0;
 			font-size: 2.5em;
 			font-weight: bold;
 			color: #FFF;
+			background: transparent url(../images/logo.png) top left no-repeat;
 
 			a {
 				background	: transparent;
@@ -97,6 +99,43 @@ body {
 			background: transparent url('../images/front-banner.png') top left no-repeat;
 			width: 765px;
 			height: 300px;
+			position: relative;
+
+			.user {
+				position: absolute;
+				width: 200px;
+				height: 100px;
+
+				.user_name {
+					font-size: 2em;
+					font-family: 'Oswald', sans-serif;
+					color: #333;
+					text-shadow: 0 1px #d1b290;
+					display: block;
+					margin: 1em auto;
+					text-transform: uppercase;
+				}
+
+				&.left {
+					left: 10px;
+					top: 100px;
+					margin: 0;
+
+					.user_image {
+						float: left;
+					}
+				}
+
+				&.right {
+					right: 10px;
+					top: 100px;
+					margin: 0;
+
+					.user_image {
+						float: right;
+					}
+				}
+			}
 		}
 
 		#description {
