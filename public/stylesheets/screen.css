@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p290@matchaa/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -169,6 +169,15 @@ body section#section div.page {
   margin-top: 2em;
 }
 /* line 110, ../../app/stylesheets/screen.scss */
+body section#section #comments {
+  width: 940px;
+  padding: 10px;
+  background: #DDD;
+  border: 1px solid #CCC;
+  border-radius: 6px;
+  display: inline-block;
+}
+/* line 119, ../../app/stylesheets/screen.scss */
 body section#section #banner {
   display: inline-block;
   background: transparent url("../images/front-banner.png") top left no-repeat;
@@ -177,13 +186,13 @@ body section#section #banner {
   position: relative;
   margin-top: 1em;
 }
-/* line 118, ../../app/stylesheets/screen.scss */
+/* line 127, ../../app/stylesheets/screen.scss */
 body section#section #banner .user {
   position: absolute;
   width: 200px;
   height: 100px;
 }
-/* line 123, ../../app/stylesheets/screen.scss */
+/* line 132, ../../app/stylesheets/screen.scss */
 body section#section #banner .user .user_name {
   font-size: 2em;
   font-family: 'Oswald', sans-serif;
@@ -193,7 +202,7 @@ body section#section #banner .user .user_name {
   margin: 1em auto;
   text-transform: uppercase;
 }
-/* line 133, ../../app/stylesheets/screen.scss */
+/* line 142, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.left {
   left: 10px;
   top: 100px;
@@ -203,11 +212,11 @@ body section#section #banner .user.left {
   background: transparent;
   border: none;
 }
-/* line 142, ../../app/stylesheets/screen.scss */
+/* line 151, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.left .user_image {
   float: left;
 }
-/* line 147, ../../app/stylesheets/screen.scss */
+/* line 156, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.right {
   right: 10px;
   top: 100px;
@@ -217,22 +226,22 @@ body section#section #banner .user.right {
   background: transparent;
   border: none;
 }
-/* line 156, ../../app/stylesheets/screen.scss */
+/* line 165, ../../app/stylesheets/screen.scss */
 body section#section #banner .user.right .user_image {
   float: right;
 }
-/* line 163, ../../app/stylesheets/screen.scss */
+/* line 172, ../../app/stylesheets/screen.scss */
 body section#section #description {
   display: inline-block;
 }
-/* line 166, ../../app/stylesheets/screen.scss */
+/* line 175, ../../app/stylesheets/screen.scss */
 body section#section #description h1 {
   margin: .5em auto;
   font-size: 3em;
   color: #055989;
   text-shadow: 0 1px #e0dcc5;
 }
-/* line 173, ../../app/stylesheets/screen.scss */
+/* line 182, ../../app/stylesheets/screen.scss */
 body section#section #description span {
   font-size: 1.5em;
   line-height: 1.6em;
@@ -241,7 +250,7 @@ body section#section #description span {
   float: left;
   width: 100%;
 }
-/* line 183, ../../app/stylesheets/screen.scss */
+/* line 192, ../../app/stylesheets/screen.scss */
 body section#section .divider {
   display: block;
   padding: 0;
@@ -250,7 +259,7 @@ body section#section .divider {
   clear: both;
   text-align: center;
 }
-/* line 191, ../../app/stylesheets/screen.scss */
+/* line 200, ../../app/stylesheets/screen.scss */
 body section#section .divider span {
   text-align: center;
   text-transform: uppercase;
@@ -260,16 +269,16 @@ body section#section .divider span {
   background: #bebba4;
   width: 30px;
 }
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 211, ../../app/stylesheets/screen.scss */
 body section#section #login {
   clear: both;
   padding: 1em 0;
 }
-/* line 206, ../../app/stylesheets/screen.scss */
+/* line 215, ../../app/stylesheets/screen.scss */
 body section#section #login label {
   display: none;
 }
-/* line 210, ../../app/stylesheets/screen.scss */
+/* line 219, ../../app/stylesheets/screen.scss */
 body section#section #login input[type=text], body section#section #login input[type=email] {
   font-size: 16px;
   font-weight: normal;
@@ -279,7 +288,7 @@ body section#section #login input[type=text], body section#section #login input[
   outline: none;
   text-align: center;
 }
-/* line 220, ../../app/stylesheets/screen.scss */
+/* line 229, ../../app/stylesheets/screen.scss */
 body section#section #login input[type=submit] {
   display: inline;
   border: none;
@@ -291,13 +300,13 @@ body section#section #login input[type=submit] {
   text-shadow: 0 1px #000;
   text-transform: uppercase;
 }
-/* line 232, ../../app/stylesheets/screen.scss */
+/* line 241, ../../app/stylesheets/screen.scss */
 body section#section #login form {
   width: 450px;
   margin: 0 auto;
   margin-top: 2em;
 }
-/* line 240, ../../app/stylesheets/screen.scss */
+/* line 249, ../../app/stylesheets/screen.scss */
 body section#section form label {
   display: block;
   text-align: left;
@@ -308,7 +317,7 @@ body section#section form label {
   margin-left: 30px;
   clear: both;
 }
-/* line 251, ../../app/stylesheets/screen.scss */
+/* line 260, ../../app/stylesheets/screen.scss */
 body section#section form input[type=text], body section#section form input[type=email] {
   font-size: 16px;
   font-weight: normal;
@@ -318,7 +327,7 @@ body section#section form input[type=text], body section#section form input[type
   outline: none;
   width: 90%;
 }
-/* line 261, ../../app/stylesheets/screen.scss */
+/* line 270, ../../app/stylesheets/screen.scss */
 body section#section form input[type=submit] {
   clear: both;
   display: inline-block;
@@ -333,18 +342,18 @@ body section#section form input[type=submit] {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
 }
-/* line 276, ../../app/stylesheets/screen.scss */
+/* line 285, ../../app/stylesheets/screen.scss */
 body section#section form img {
   float: left;
   padding: 0 10px;
   margin: 0 30px 0 10px;
 }
-/* line 283, ../../app/stylesheets/screen.scss */
+/* line 292, ../../app/stylesheets/screen.scss */
 body section#section h1 {
   font-size: 1.8em;
   margin: .5em auto;
 }
-/* line 288, ../../app/stylesheets/screen.scss */
+/* line 297, ../../app/stylesheets/screen.scss */
 body section#section .left, body section#section .right {
   width: 440px;
   padding: 25px 15px;
@@ -353,40 +362,40 @@ body section#section .left, body section#section .right {
   box-shadow: 0 1px 4px #333 inset;
   border-radius: 5px;
 }
-/* line 296, ../../app/stylesheets/screen.scss */
+/* line 305, ../../app/stylesheets/screen.scss */
 body section#section .left .input, body section#section .right .input {
   float: left;
   width: 250px;
 }
-/* line 301, ../../app/stylesheets/screen.scss */
+/* line 310, ../../app/stylesheets/screen.scss */
 body section#section .left.left, body section#section .right.left {
   float: left;
   background: #555;
   color: #FFF;
 }
-/* line 307, ../../app/stylesheets/screen.scss */
+/* line 316, ../../app/stylesheets/screen.scss */
 body section#section .left.right, body section#section .right.right {
   float: right;
   background: #555;
   color: #FFF;
 }
-/* line 314, ../../app/stylesheets/screen.scss */
+/* line 323, ../../app/stylesheets/screen.scss */
 body section#section div.category {
   width: 300px;
   float: left;
   padding: 0 10px;
 }
-/* line 319, ../../app/stylesheets/screen.scss */
+/* line 328, ../../app/stylesheets/screen.scss */
 body section#section div.category h3 {
   margin: .5em auto;
 }
-/* line 323, ../../app/stylesheets/screen.scss */
+/* line 332, ../../app/stylesheets/screen.scss */
 body section#section div.category ul.questions {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 328, ../../app/stylesheets/screen.scss */
+/* line 337, ../../app/stylesheets/screen.scss */
 body section#section div.category ul.questions li {
   margin: 0;
   padding: 7px 5px;
@@ -395,25 +404,25 @@ body section#section div.category ul.questions li {
   line-height: 1.6em;
   font-size: 13px;
 }
-/* line 339, ../../app/stylesheets/screen.scss */
+/* line 348, ../../app/stylesheets/screen.scss */
 body section#section table {
   margin: 1em auto 0;
 }
-/* line 342, ../../app/stylesheets/screen.scss */
+/* line 351, ../../app/stylesheets/screen.scss */
 body section#section table thead td {
   font-family: 'Holtwood One SC';
 }
-/* line 347, ../../app/stylesheets/screen.scss */
+/* line 356, ../../app/stylesheets/screen.scss */
 body section#section table td {
   padding: 10px 5px;
 }
-/* line 353, ../../app/stylesheets/screen.scss */
+/* line 362, ../../app/stylesheets/screen.scss */
 body footer#footer {
   background: rgba(0, 0, 0, 0.78);
   color: #FFF;
   min-height: 100px;
 }
-/* line 358, ../../app/stylesheets/screen.scss */
+/* line 367, ../../app/stylesheets/screen.scss */
 body footer#footer span.copyright {
   padding: 1em 0;
   margin: .5em auto;
@@ -422,18 +431,18 @@ body footer#footer span.copyright {
   display: block;
 }
 
-/* line 368, ../../app/stylesheets/screen.scss */
+/* line 377, ../../app/stylesheets/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 371, ../../app/stylesheets/screen.scss */
+/* line 380, ../../app/stylesheets/screen.scss */
 .clearfix {
   clear: both;
   display: block;
 }
 
-/* line 375, ../../app/stylesheets/screen.scss */
+/* line 384, ../../app/stylesheets/screen.scss */
 .notification {
   position: absolute;
   top: -32px;
@@ -444,4 +453,14 @@ body footer#footer span.copyright {
   z-index: 5;
   display: none;
   width: 100%;
+}
+
+/* line 395, ../../app/stylesheets/screen.scss */
+span.num {
+  border-radius: 30px;
+  background: #9c8164;
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  color: #FFF;
 }

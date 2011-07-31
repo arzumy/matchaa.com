@@ -1,12 +1,13 @@
-%div#banner
-	%div.user.left
-		%span.user_image
-			= image_tag player1.gravatar_url
-		%span.user_name
-			= player1.name
-	
-	%div.user.right
-		%span.user_image
-			= image_tag player2.gravatar_url
-		%span.user_name
-			= player2.name
+= link_to match_path(match) do
+  %div#banner
+    %div.user.left
+      %span.user_image
+        = image_tag match.player1.gravatar_url
+      %span.user_name
+        = match.player1.name
+
+    %div.user.right
+      %span.user_image
+        = image_tag match.player2.gravatar_url
+      %span.user_name
+        = match.player2.name
