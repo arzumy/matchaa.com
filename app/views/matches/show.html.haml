@@ -20,6 +20,8 @@
 			%td
 				= @player2_answers[question.id] unless @player2_answers.empty?
 
-#fb-root
-%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-%fb:comments{:href => match_url(@match), :num_posts => "10", :width => "960"}
+%div#comments
+	%h1 Comments the 'Matchaa!'
+	#fb-root
+	%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+	%fb:comments{:href => match_url(@match), :num_posts => "10", :width => "960"}
