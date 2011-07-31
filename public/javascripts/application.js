@@ -34,5 +34,27 @@ $(document).ready(function () {
 		setTimeout(function() {
 			$('.notification').slideUp('fast');
 		}, 5*1e3)
-	}
+	};
+
+	$('table tr').each(function(i) {
+		var num = $('<span>', {html: i +1, 'class': 'num'});
+		var data = $('<td>', {html: num});
+		$(this).prepend(data);
+	});
+
+	var no = {
+		'border-radius': '30px',
+		'background': '#9c8164',
+		'height': '25px',
+		'width': '25px',
+		'line-height': '25px',
+		'color': '#FFF',
+		'font-weight': 'bold',
+		'text-shadow': '0 -1px #222',
+		'float': 'left',
+		'text-align': 'center',
+		'box-shadow': '0 1px 2px #7a5b3a inset',
+		'border-bottom': '1px solid #FFF'
+	};
+	$('.num').css(no);
 });
