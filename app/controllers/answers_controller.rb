@@ -42,7 +42,7 @@ class AnswersController < ApplicationController
   end
 
   def update_match_status
-     if [@match.token1, @matchs.token2].all? {|t| t.nil?}
+     if [@match.token1, @match.token2].all? {|t| t.nil?}
        @match.completed!
      end
   end
