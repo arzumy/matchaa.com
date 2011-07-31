@@ -10,9 +10,12 @@
 			%td Question
 			%td(width="200") Player 1
 			%td(width="200") Player 2
+	- # TODO: we just show all answers  now regardless of status
 	- @match.questions.each do |question|
 		%tr
 			%td
 				= question.body
 			%td
+				= @player1_answers[question.id] unless @player1_answers.empty?
 			%td
+				= @player2_answers[question.id] unless @player2_answers.empty?
