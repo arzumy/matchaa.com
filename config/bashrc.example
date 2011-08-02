@@ -1,0 +1,3 @@
+# List of config vars used
+# http://devcenter.heroku.com/articles/config-vars
+export MC_GA=google_analytic_account_no
