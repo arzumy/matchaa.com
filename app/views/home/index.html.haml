@@ -1,16 +1,23 @@
 = banner(@match) if @match
 
+%div.divider
+  %div.box-match
+    %ul.pending
+      - @list.each do |m|
+        %li
+          = m.cached_slug
+  %div.box-match
+    %ul.completed
+      - @list.each do |m|
+        %li
+          = m.cached_slug
+          
 - unless user_signed_in?
   %div.divider
     %span or
 
   = render :partial => 'sessions/form'
 
-%div.divider
-  %ul 
-    - @list.each do |m|
-      %li
-        = m.cached_slug
 
 %div#description
   %h1
