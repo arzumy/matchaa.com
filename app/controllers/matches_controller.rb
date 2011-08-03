@@ -2,6 +2,10 @@ class MatchesController < InheritedResources::Base
   before_filter :authenticate_user!, :only => [:new, :create, :mine]
 
   def show
+    @player1_name = User.find(resource.player1_id).name
+    @player2_name = User.find(resource.player2_id).name
+
+
     @player1_answers = resource.player1_answers
     @player2_answers = resource.player2_answers
     show!

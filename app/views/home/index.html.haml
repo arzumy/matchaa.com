@@ -7,6 +7,10 @@
   = render :partial => 'sessions/form'
 
 %div.divider
+  %ul 
+    - @list.each do |m|
+      %li
+        = m.cached_slug
 
 %div#description
   %h1

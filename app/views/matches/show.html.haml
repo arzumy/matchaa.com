@@ -8,8 +8,10 @@
 	%thead
 		%tr
 			%td Question
-			%td(width="200") Player 1
-			%td(width="200") Player 2
+			%td(width="200") 
+				= @player1_name
+			%td(width="200") 
+				= @player2_name
 	- # TODO: we just show all answers  now regardless of status
 	- @match.questions.each do |question|
 		%tr
@@ -24,4 +26,4 @@
 	%h1 Comments the 'Matchaa!'
 	#fb-root
 	%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
-	%fb:comments{:href => match_url(@match), :num_posts => "10", :width => "960"}
+	%fb:comments{:href => match_url(@match), :num_posts => "10", :width => "900"}
