@@ -1,8 +1,18 @@
 #for heroku
 project_type = :rails
 http_path    = '/'
-css_dir      = 'tmp/stylesheets'
-sass_dir     = 'app/views/stylesheets'
+# css_dir      = 'tmp/stylesheets'
+# sass_dir     = 'app/views/stylesheets'
+line_comments = false
+
+environment = Compass::AppIntegration::Rails.env
+if environment == 'production'
+  css_dir = "tmp/stylesheets"
+  sass_dir = "app/views/stylesheets"
+else
+  css_dir = "public/stylesheets"
+  sass_dir = "app/stylesheets"
+end
 
 # This configuration file works with both the Compass command line tool and within Rails.
 # Require any additional compass plugins here.
@@ -18,6 +28,7 @@ sass_dir     = 'app/views/stylesheets'
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
+# line_comments = false
 # line_comments = false
 
 
