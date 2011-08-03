@@ -3,6 +3,9 @@ class HomeController < ApplicationController
   def index
     @match = Match.last
     @list = Match.all
+    @pending_match = Match.find(:all, :order => "created_at DESC", :conditions => {status:'pending'})
+    @finished_match = Match.find(:all, :order => "created_at DESC", :conditions => {status:'finish'})
+
   end
 
   def test

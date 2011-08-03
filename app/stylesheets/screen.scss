@@ -126,7 +126,7 @@ body {
 
 			.user {
 				position: absolute;
-				width: 200px;
+				width: 250px;
 				height: 100px;
 
 				.user_name {
@@ -151,6 +151,9 @@ body {
 					.user_image {
 						float: left;
 					}
+					.user_name {
+						text-align: right;
+					}
 				}
 
 				&.right {
@@ -164,6 +167,9 @@ body {
 
 					.user_image {
 						float: right;
+					}
+					.user_name {
+						text-align: left;
 					}
 				}
 			}
@@ -209,19 +215,65 @@ body {
 		}
 
 		div.box-match {
-			width: 45%;
-			padding: 10px;
-			margin: 0 10px;
+			width: 48%;
+			padding: 0 0 10px 0;
+			margin: 10px;
 			background: #999;
 			float: left;
+			border-radius: 5px;
+			text-align: center;
+			display: inline-block;
+			box-shadow: 0 1px 10px #222;
+
+			h3 {
+				border-radius: 5px 5px 0 0;
+				padding: 10px;
+				background: #055989;
+				border-bottom: 1px solid #362f29;
+				color: #FFF;
+				text-shadow: 0 1px #111;
+			}
 
 			ul {
+				border-top: 1px solid #c6c6c6;
 				list-style: none;
-				margin: 0;
+				margin: 0 auto;
 				padding: 0;
 
 				li {
-					padding: 6px 0;
+					padding: 12px 0;
+					margin: 0 auto;
+					width: 100%;
+					position: relative;
+					display: inline-block;
+					float: left;
+					border-top: 1px solid #C6C6C6;
+					border-bottom: 1px solid #7a7a7a;
+
+					img.left, img.right {
+						width: 37px;
+						height: 37px;
+						padding: 5px;
+					}
+
+					img.left { position: absolute; left: 10px; top: 4px }
+
+					img.right { position: absolute; right: 10px; top: 4px }
+
+					span {
+						display: inline;
+
+						h4 {
+							color: #055989;
+							text-shadow: 0 1px #DDD;
+						}
+					}
+
+					em { font-style: italic; font-size: 11px }
+
+					&:last-child {
+						border-bottom: none;
+					}
 				}
 			}
 		}

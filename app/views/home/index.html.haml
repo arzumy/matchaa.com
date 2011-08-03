@@ -1,17 +1,33 @@
 = banner(@match) if @match
 
-%div.divider
-  %div.box-match
-    %ul.pending
-      - @list.each do |m|
-        %li
-          = m.cached_slug
-  %div.box-match
-    %ul.completed
-      - @list.each do |m|
-        %li
-          = m.cached_slug
-          
+%div.matches
+  - if @match.status.to_s == 'pending'
+    %div.box-match
+      %h3 Pending Matches/ In Progress
+      %ul.pending
+        - @pending_match.each do |m|
+          %li
+            = image_tag User.find(m.player1_id).gravatar_url, width: 32, :class => 'left'
+            %span
+              %h4
+                = m.cached_slug
+              %em
+                = "#{time_ago_in_words(m.created_at)} ago"
+            = image_tag User.find(m.player2_id).gravatar_url, width: 32, :class => 'right'
+
+    %div.box-match
+      %h3 Finished Matches
+      %ul.completed
+        - @finished_match.each do |m|
+          %li
+            = image_tag User.find(m.player1_id).gravatar_url, width: 32, :class => 'left'
+            %span
+              %h4
+                = m.cached_slug
+              %em
+                = "#{time_ago_in_words(m.created_at)} ago"
+            = image_tag User.find(m.player2_id).gravatar_url, width: 32, :class => 'right'
+
 - unless user_signed_in?
   %div.divider
     %span or
