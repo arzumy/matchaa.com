@@ -12,8 +12,7 @@ require 'compass/app_integration/rails'
 require 'fileutils'
 FileUtils.mkdir_p(Rails.root.join("tmp", "stylesheets"))
 
-environment = Compass::AppIntegration::Rails.env
-if environment == 'production'
+if Compass::AppIntegration::Rails.env.equal?(:production)
   Compass::AppIntegration::Rails.initialize!
 
   Rails.configuration.middleware.delete('Sass::Plugin::Rack')

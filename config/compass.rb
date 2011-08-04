@@ -5,8 +5,7 @@ http_path    = '/'
 # sass_dir     = 'app/views/stylesheets'
 line_comments = false
 
-environment = Compass::AppIntegration::Rails.env
-if environment == 'production'
+if Compass::AppIntegration::Rails.env.equal?(:production)
   css_dir = "tmp/stylesheets"
   sass_dir = "app/views/stylesheets"
 else
