@@ -1,0 +1,8 @@
+%li
+  = image_tag match.player1.gravatar_url, width: 32, :class => 'left'
+  %span
+    %h4
+      = link_to match.name, match_path(match)
+    %em
+      = "#{time_ago_in_words(match.created_at)} ago"
+  = image_tag match.player2.gravatar_url, width: 32, :class => 'right'

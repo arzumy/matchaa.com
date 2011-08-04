@@ -2,10 +2,6 @@ class MatchesController < InheritedResources::Base
   before_filter :authenticate_user!, :only => [:new, :create, :mine]
 
   def show
-    @player1_name = User.find(resource.player1_id).name
-    @player2_name = User.find(resource.player2_id).name
-
-
     @player1_answers = resource.player1_answers
     @player2_answers = resource.player2_answers
     show!
@@ -16,11 +12,8 @@ class MatchesController < InheritedResources::Base
   end
 
   def create
-    @player1 = User.find_by_email(params[:match][:player1][:email])
-    @player2 = User.find_by_email(params[:match][:player2][:email])
-
-    @player1 = User.create(params[:match][:player1]) unless @player1
-    @player2 = User.create(params[:match][:player2]) unless @player2
+    @player1 = User.find_by_email(params[:match][:player1][:email]) || User.create(params[:match][:player1])
+    @player2 = User.find_by_email(params[:match][:player2][:email]) || User.create(params[:match][:player2])
 
     @match = current_user.matches.build(player1: @player1, player2: @player2)
 

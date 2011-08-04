@@ -8,8 +8,6 @@ MatchaaCom::Application.routes.draw do
     match '/users/create_token' => 'sessions#create_token'
   end
 
-  match "/test" => 'home#test'
-
   resources :matches, :only => [:create, :new, :edit, :show] do
     member do
       put :finalize

@@ -5,6 +5,8 @@ class Match < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
   has_many :answers
+  scope :pending, where(:status => 'pending')
+  scope :completed, where(:status => 'completed')
 
   before_create :set_tokens
 

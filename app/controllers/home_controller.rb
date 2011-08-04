@@ -1,13 +1,7 @@
 class HomeController < ApplicationController
   before_filter :authenticate_user!, :only => [:test]
   def index
-    @match = Match.last
-    @list = Match.all
-    @pending_match = Match.find(:all, :order => "created_at DESC", :conditions => {status:'pending'})
-    @finished_match = Match.find(:all, :order => "created_at DESC", :conditions => {status:'finish'})
-
-  end
-
-  def test
+    @pending_matches  = Match.pending.order("id DESC").limit(6)
+    @completed_matches = Match.completed.order("id DESC").limit(5)
   end
 end

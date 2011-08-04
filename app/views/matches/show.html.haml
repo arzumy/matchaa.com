@@ -9,9 +9,9 @@
 		%tr
 			%td Question
 			%td(width="200") 
-				= @player1_name
+				= resource.player1.name
 			%td(width="200") 
-				= @player2_name
+				= resource.player2.name
 	- # TODO: we just show all answers  now regardless of status
 	- @match.questions.each do |question|
 		%tr
