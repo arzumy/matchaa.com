@@ -9,8 +9,8 @@
   %header#header
     %div.page
       %h1 matchaa
-      - unless user_signed_in?
-        %div.login
+      %div.login
+        - unless user_signed_in?
           = form_for(:user, url: registration_path(:user) ) do |f|
             %p
               = f.text_field :name, :placeholder => 'Your Name'
@@ -18,9 +18,14 @@
               = f.email_field :email, :placeholder => 'Your Email'
             %p
               = f.submit 'Make a Match'
-      - if user_signed_in?
-        = link_to 'Sign Out', users_sign_out_path, :class => 'nav'
-        = link_to 'Create Match', new_match_path, :class => 'nav'
+        - if user_signed_in?
+          %span
+            %strong
+              = "You've logged as #{current_user.name}"
+            = image_tag current_user.gravatar_url, :width => 60, :class => 'right'
+          %nav
+            = link_to 'Create Match', new_match_path, :class => 'submit'
+            = link_to 'Sign Out', users_sign_out_path, :class => 'logout'
 
   %section#section
     %div.page

@@ -79,7 +79,7 @@ body #header div.page, body #section div.page, body #footer div.page {
 body h1, body h2, body h3, body h4, body h5 {
   font-family: 'Holtwood One SC';
 }
-body input[type=submit], body #footer {
+body input[type=submit], body .submit, body .logout, body #footer {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   text-shadow: 0 1px #000;
@@ -104,8 +104,6 @@ body header#header h1 a {
 body header#header a.nav {
   font-family: 'Holtwood One SC';
   font-size: 1.2em;
-  float: right;
-  margin: 35px 10px;
   text-decoration: none;
   color: #FFF;
 }
@@ -140,6 +138,40 @@ body header#header div.login input[type=submit] {
   font-size: 1.4em;
   padding: 5px 20px;
   border-radius: 30px;
+  text-decoration: none;
+}
+body header#header div.login span {
+  height: 65px;
+  width: 310px;
+  float: left;
+  margin: 10px;
+}
+body header#header div.login span strong {
+  vertical-align: top;
+  margin: 1.5em 0;
+  margin-left: 20px;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  text-align: right;
+}
+body header#header div.login nav {
+  display: block;
+  margin: 0 10px;
+  text-align: center;
+}
+body header#header div.login nav a.submit, body header#header div.login nav a.logout {
+  border: none;
+  cursor: pointer;
+  margin: .5em .2em;
+  outline: none;
+  background: #055989;
+  color: #FFF;
+  font-size: 1.3em;
+  padding: 5px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  float: left;
 }
 body section#section div.page {
   padding: 1em 0 3em 0;
@@ -163,7 +195,7 @@ body section#section #banner {
 }
 body section#section #banner .user {
   position: absolute;
-  width: 250px;
+  width: 280px;
   height: 100px;
 }
 body section#section #banner .user .user_name {
@@ -186,9 +218,10 @@ body section#section #banner .user.left {
 }
 body section#section #banner .user.left .user_image {
   float: left;
+  margin: 10px 10px 10px 0;
 }
 body section#section #banner .user.left .user_name {
-  text-align: right;
+  text-align: left;
 }
 body section#section #banner .user.right {
   right: 10px;
@@ -201,9 +234,10 @@ body section#section #banner .user.right {
 }
 body section#section #banner .user.right .user_image {
   float: right;
+  margin: 10px 0 10px 10px;
 }
 body section#section #banner .user.right .user_name {
-  text-align: left;
+  text-align: right;
 }
 body section#section #description {
   display: inline-block;
@@ -292,9 +326,14 @@ body section#section div.box-match ul li img.right {
 body section#section div.box-match ul li span {
   display: inline;
 }
-body section#section div.box-match ul li span h4 {
+body section#section div.box-match ul li span h4 a {
   color: #055989;
   text-shadow: 0 1px #DDD;
+  text-decoration: none;
+}
+body section#section div.box-match ul li span h4 a:hover {
+  color: #FF0000;
+  text-decoration: underline;
 }
 body section#section div.box-match ul li em {
   font-style: italic;
