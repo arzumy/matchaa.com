@@ -251,6 +251,11 @@ body {
 				width: 30px;
 			}
 		}
+		
+		div.match-time {
+			clear: both;
+			display: block;
+		}
 
 		div.box-match {
 			width: 48%;
@@ -486,6 +491,32 @@ body {
 			display: block;
 		}
 	}
+}
+
+div.social-share {
+	float: left;
+	margin: -50px 0 0 0;
+	padding: 10px 0;
+
+	p {
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: bold;
+		margin-bottom: .5em;
+	}
+	
+	.matchaa-share-button {
+		float: left;
+		margin: 0 10px 0 0;
+		padding: 10px;
+		border: 1px solid #999;
+		background: #DDD;
+		border-radius: 4px;
+
+		&.plus {
+			padding: 7px 0 7px 10px;
+		}
+	}	
 }
 
 .hidden {

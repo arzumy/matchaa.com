@@ -273,6 +273,10 @@ body section#section .divider span {
   background: #bebba4;
   width: 30px;
 }
+body section#section div.match-time {
+  clear: both;
+  display: block;
+}
 body section#section div.box-match {
   width: 48%;
   padding: 0 0 10px 0;
@@ -479,6 +483,29 @@ body footer#footer span.copyright {
   font-size: 1.4em;
   text-transform: uppercase;
   display: block;
+}
+
+div.social-share {
+  float: left;
+  margin: -50px 0 0 0;
+  padding: 10px 0;
+}
+div.social-share p {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+div.social-share .matchaa-share-button {
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 10px;
+  border: 1px solid #999;
+  background: #DDD;
+  border-radius: 4px;
+}
+div.social-share .matchaa-share-button.plus {
+  padding: 7px 0 7px 10px;
 }
 
 .hidden {

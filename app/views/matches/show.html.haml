@@ -1,3 +1,5 @@
+= render :partial => 'shared/share', :locals => { :url => request.url }
+
 %div.match-time
 	%h1= @match.category.name
 	%h5= "#{time_ago_in_words(@match.created_at)} ago"
